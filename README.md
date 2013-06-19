@@ -1,4 +1,4 @@
-#Kundera访问HBase示例代码
+#Kundera访问HBase示例代码（HBase SQL引擎的一种）
 
 ##环境变量
 Kundera 2.5
