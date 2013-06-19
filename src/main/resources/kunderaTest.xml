@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientProperties>
+	<datastores>
+		<dataStore>
+			<name>hbase</name>
+			<connection>
+				<properties>
+					<property name="hbase.zookeeper.quorum" value="192.168.56.100,192.168.56.101"></property>
+					<property name="hbase.zookeeper.property.clientPort"
+						value="2181"></property>
+				</properties>
+			</connection>
+			<schemas>
+				<schema>
+					<name>HBASEUSERXYZ</name>
+					<tables>
+						<table>
+							<name>HBASEUSERXYZ</name>
+							<properties>
+								<property name="TTL" value="12345678" />
+								<property name="VERSIONS" value="6" />
+								<property name="MIN_VERSIONS" value="3" />
+								<property name="COMPRESSION" value="GZ" />
+								<property name="COMPRESSION_COMPACT" value="GZ" />
+							</properties>
+						</table>
+					</tables>
+				</schema>
+				<schema>
+					<name>KunderaExamples</name>
+					<tables>
+						<table>
+							<name>AGE</name>
+							<properties>
+								<property name="TTL" value="123456" />
+								<property name="MAX_VERSIONS" value="5" />
+								<property name="MIN_VERSIONS" value="2" />
+								<property name="COMPRESSION" value="GZ" />
+								<property name="COMPRESSION_COMPACT" value="GZ" />
+							</properties>
+						</table>
+						<table>
+							<name>PERSON_NAME</name>
+							<properties>
+								<property name="TTL" value="123456" />
+								<property name="MAX_VERSIONS" value="5" />
+								<property name="MIN_VERSIONS" value="2" />
+								<property name="COMPRESSION" value="GZ" />
+								<property name="COMPRESSION_COMPACT" value="GZ" />
+							</properties>
+						</table>
+					</tables>
+				</schema>
+			</schemas>
+		</dataStore>
+	</datastores>
+</clientProperties>
