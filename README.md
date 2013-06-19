@@ -1,4 +1,4 @@
-#An example of Kundera HBase Testing.
+#An example of Kundera HBase Testing. 使用Kundera访问HBase的示例代码
 
 ##环境变量
 Kundera 2.5
