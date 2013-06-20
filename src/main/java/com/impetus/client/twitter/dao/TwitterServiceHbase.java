@@ -13,7 +13,7 @@
  *  * See the License for the specific language governing permissions and
  *  * limitations under the License.
  ******************************************************************************/
-package com.adintellig.hbasesql.kundera.twitter.dao;
+package com.impetus.client.twitter.dao;
 
 import java.util.List;
 
@@ -21,11 +21,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 
-import com.adintellig.hbasesql.kundera.twitter.entities.ExternalLinkHBase;
-import com.adintellig.hbasesql.kundera.twitter.entities.PreferenceHBase;
-import com.adintellig.hbasesql.kundera.twitter.entities.TweetHbase;
-import com.adintellig.hbasesql.kundera.twitter.entities.UserHBase;
-
+import com.impetus.client.twitter.entities.ExternalLinkHBase;
+import com.impetus.client.twitter.entities.PreferenceHBase;
+import com.impetus.client.twitter.entities.TweetHbase;
+import com.impetus.client.twitter.entities.UserHBase;
 
 /**
  * Data access object class for implementation of twitter.

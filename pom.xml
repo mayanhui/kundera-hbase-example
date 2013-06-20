@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 	http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<groupId>com.adintellig.hbasesql</groupId>
 	<artifactId>kundera-hbase-example</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
-	
+
 	<name>kundera-hbase-example</name>
 
 	<url>http://maven.apache.org</url>
@@ -43,6 +43,11 @@
 			<artifactId>kundera-hbase</artifactId>
 			<version>2.5</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.3</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -71,13 +76,6 @@
 									<artifactId>kundera-hbase</artifactId>
 									<version>2.5</version>
 								</artifactItem>
-								<!--
-								<artifactItem>
-									<groupId>com.impetus.client</groupId>
-									<artifactId>kundera-core</artifactId>
-									<version>2.5</version>
-								</artifactItem>
-								-->
 								<artifactItem>
 									<groupId>javax.persistence</groupId>
 									<artifactId>persistence-api</artifactId>

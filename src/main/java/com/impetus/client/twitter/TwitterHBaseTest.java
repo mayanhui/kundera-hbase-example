@@ -13,17 +13,17 @@
  *  * See the License for the specific language governing permissions and
  *  * limitations under the License.
  ******************************************************************************/
-package com.adintellig.hbasesql.kundera.twitter;
+package com.impetus.client.twitter;
 
 import java.util.List;
 
-import com.adintellig.hbasesql.kundera.twitter.dao.TwitterHbase;
-import com.adintellig.hbasesql.kundera.twitter.dao.TwitterServiceHbase;
-import com.adintellig.hbasesql.kundera.twitter.entities.ExternalLinkHBase;
-import com.adintellig.hbasesql.kundera.twitter.entities.PersonalDetailHbase;
-import com.adintellig.hbasesql.kundera.twitter.entities.PreferenceHBase;
-import com.adintellig.hbasesql.kundera.twitter.entities.TweetHbase;
-import com.adintellig.hbasesql.kundera.twitter.entities.UserHBase;
+import com.impetus.client.twitter.dao.TwitterHbase;
+import com.impetus.client.twitter.dao.TwitterServiceHbase;
+import com.impetus.client.twitter.entities.ExternalLinkHBase;
+import com.impetus.client.twitter.entities.PersonalDetailHbase;
+import com.impetus.client.twitter.entities.PreferenceHBase;
+import com.impetus.client.twitter.entities.TweetHbase;
+import com.impetus.client.twitter.entities.UserHBase;
 
 
 public class TwitterHBaseTest {
@@ -38,7 +38,7 @@ public class TwitterHBaseTest {
 	String userId2;
 
 	/** The twitter. */
-	protected TwitterHbase twitter;
+	protected  TwitterHbase twitter;
 
 	private String persistenceUnitName;
 
@@ -366,25 +366,26 @@ public class TwitterHBaseTest {
 		String userId1 = "0001";
 		String userId2 = "0002";
 
-		System.out.println("1....");
+		System.out.println("Prepare tables ...");
 		TwitterServiceHbase twitter = new TwitterServiceHbase("twibaseTest");
 		twitter.createEntityManager();
-		System.out.println("2....");
+		System.out.println("Prepare tables done.");
 
+		System.out.println("Prepare data ...");
 		TwitterHBaseTest test = new TwitterHBaseTest();
 		test.setUpInternal("twibaseTest");
+		test.addUsers();
 		test.addAllUserInfo();
 		test.addTweets();
-		test.addUsers();
 		test.addExternalLinks();
-
-		System.out.println("2....");
-
+		System.out.println("Prepare data done.");
+		
+		System.out.println("Query ...");
 		List<TweetHbase> tweetsUser1 = twitter.getAllTweets(userId1);
 		List<TweetHbase> tweetsUser2 = twitter.getAllTweets(userId2);
 
-		System.out.println(tweetsUser1.size());
-		System.out.println(tweetsUser2.size());
+		System.out.println("Num of twitters for user:"+userId1 + " = " + tweetsUser1.size());
+		System.out.println("Num of twitters for user:"+userId2 + " = " + tweetsUser2.size());
 
 		twitter.closeEntityManager();
 	}

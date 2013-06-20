@@ -13,31 +13,26 @@
  *  * See the License for the specific language governing permissions and
  *  * limitations under the License.
  ******************************************************************************/
-package com.adintellig.hbasesql.kundera.twitter.dao;
+package com.impetus.client.twitter.utils;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import java.util.Date;
+import java.util.UUID;
 
 /**
- * The Class SuperDao.
+ * Class for utility methods
  * 
- * @author impetus
+ * @author amresh.singh
  */
-public class SuperDaoHbase
+public class ExampleUtilsHbase
 {
-
-    /**
-     * Inits the.
-     * 
-     * @param persistenceUnitName
-     *            the persistence unit name
-     * @return the entity manager
-     * @throws Exception
-     *             the exception
-     */
-    protected EntityManagerFactory createEntityManagerFactory(String persistenceUnitName)
+    public static String getUniqueId()
     {
-        return Persistence.createEntityManagerFactory(persistenceUnitName);
-
+        return UUID.randomUUID().toString();
     }
+
+    public static long getCurrentTimestamp()
+    {
+        return new Date().getTime();
+    }
+
 }
