@@ -3,7 +3,7 @@
 	http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.adintellig.hbasesql</groupId>
+	<groupId>com.adintellig</groupId>
 	<artifactId>kundera-hbase-example</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
